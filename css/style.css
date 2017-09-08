@@ -35,13 +35,13 @@ img {
 }
 
 .logo {
-    width: 40%;
-    margin: 10% auto 5% auto
+    width: 38%;
+    margin: 8% auto 5% auto
 }
 
 /* 文字说明背景 */
 .box-bg {
-    width: 70%;
+    width: 65%;
     padding: 3%;
     margin: 0 auto 5% auto;
     background: rgba(255, 250, 240, 0.7);

@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div class="screen" id="">
+<div class="screen" id="screen1"  style="display: block">
     <div class="logo img-box"><img src="img/logo.png"/></div>
     <div class="box-bg">
         <div class="box-text-2"><p class="font-big">对信息短时存储和加工的能力</p>
@@ -28,12 +28,13 @@
         <p class="button" id="goScreen2">进入测验</p>
     </div>
 </div>
-<div class="screen">
+<div class="screen" id="screen2">
     <div class="box-bg box-bg-top">
         <div class="box-text-2">
-            <p>判断屏幕上出现的数字是否为<span>"1"</span></p>
-            <p class="font-small">如果是<span>"1"</span>,请快速点击<img src="img/icon2.png"
-                                                                class="icon2"/>按钮,如果不是"1",就<span>不按键</span></p>
+            <p>判断屏幕上出现的数字是否为"<span data-role="check">1</span>"</p>
+            <p class="font-small">如果是"<span data-role="check">1</span>",请快速点击<img src="img/icon2.png"
+                                                                                  class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            </p>
         </div>
 
     </div>
@@ -45,9 +46,10 @@
     <div class="box-bg box-bg-top">
         <div class="box-text-2">
             <p>您回答得很好！请点击下一页继续答题。</p>
-            <p>判断屏幕上出现的数字是否为<span>"1"</span></p>
-            <p class="font-small">如果是<span>"1"</span>,请快速点击<img src="img/icon2.png"
-                                                                class="icon2"/>按钮,如果不是"1",就<span>不按键</span></p>
+            <p>判断屏幕上出现的数字是否为"<span data-role="check">1</span>"</p>
+            <p class="font-small">如果是"<span data-role="check">1</span>",请快速点击<img src="img/icon2.png"
+                                                                                  class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            </p>
         </div>
     </div>
     <div class="button-box">
@@ -122,9 +124,10 @@
 </div>
 
 
-<div class="screen " style="display: block">
-    <div class="part-text part-text-small" style="display: none">如果是<span>"1"</span>，请快速点击<img src="img/icon2.png"
-                                                                                               class="icon2"/>按钮；如果不是<span>"1"</span>，就不按键。
+<div class="screen ">
+    <div class="part-text part-text-small" style="display: none">如果是"<span data-role="check">1</span>"，请快速点击<img
+            src="img/icon2.png"
+            class="icon2"/>按钮；如果不是，就不按键。
     </div>
     <div class="part-text" style="display: none">如果屏幕上出现的数字与<span>前一个数字</span>相同，请快速点击<img src="img/icon2.png"
                                                                                            class="icon2"/>按钮；否则不按键。
@@ -191,7 +194,7 @@
     $('.box-bg').css({'font-size': screenH / 24, 'line-height': screenH / 10 + 'px'})
     $('.box-bg .font-small').css({'font-size': screenH / 26, 'line-height': screenH / 12 + 'px'})
     $('.button').css({'font-size': screenH / 24, 'line-height': screenH / 11 + 'px'})
-    $('.part').css({'width': screenH / 4, 'height': screenH / 4,'font-size': screenH / 6})
+    $('.part').css({'width': screenH / 4, 'height': screenH / 4, 'font-size': screenH / 6})
     $('.part-btn').css({'width': screenH / 7, 'height': screenH / 7})
     $('.part-text').css({'font-size': screenH / 32})
     $('.icon2').css({'height': screenH / 26})
