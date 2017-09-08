@@ -11,100 +11,168 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta name="msapplication-tap-highlight" content="no"/>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-    <title>双任务切换切图-叶子下落</title>
+    <title>数字记忆</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="javascript/jquery-2.1.3.js"></script>
 </head>
 <body>
-<div id="hideTime" style="font-size: 60px;    position: relative;  z-index: 1000;">360</div>
-<div class="screen" id="screen1" style="display: block">
+
+<div class="screen" id="">
     <div class="logo img-box"><img src="img/logo.png"/></div>
     <div class="box-bg">
-        <div class="box-text-2"><p class="font-big">在多个任务间灵活切换的能力。</p>
-            <p class="font-small">完成本测验大约需要5分钟。</p></div>
+        <div class="box-text-2"><p class="font-big">对信息短时存储和加工的能力</p>
+            <p class="font-small">本测验大约需要10分钟</p></div>
     </div>
 
     <div class="button-box">
         <p class="button" id="goScreen2">进入测验</p>
     </div>
 </div>
-<div class="screen" id="screen2">
+<div class="screen">
     <div class="box-bg box-bg-top">
-        <ul class="box-text-1">
-            <li><i><img src="img/icon.png"/></i>请仔细观察从屏幕左右两侧下落的树叶。</li>
-            <li><i><img src="img/icon.png"/></i>
-                树叶从左侧下落，请点击与树叶颜色相同的按钮。
-            </li>
-            <li><i><img src="img/icon.png"/></i>
-                树叶从右侧下落，请点击与树叶形状相同的按钮。
-            </li>
-            <li><i><img src="img/icon.png"/></i>
-                请您又快又准地作答。
-            </li>
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否为<span>"1"</span></p>
+            <p class="font-small">如果是<span>"1"</span>,请快速点击<img src="img/icon2.png"
+                                                                class="icon2"/>按钮,如果不是"1",就<span>不按键</span></p>
+        </div>
 
-        </ul>
     </div>
     <div class="button-box">
-        <p class="button" id="goPractice">开始练习</p>
+        <p class="button">开始练习</p>
+    </div>
+</div>
+<div class="screen ">
+    <div class="box-bg box-bg-top">
+        <div class="box-text-2">
+            <p>您回答得很好！请点击下一页继续答题。</p>
+            <p>判断屏幕上出现的数字是否为<span>"1"</span></p>
+            <p class="font-small">如果是<span>"1"</span>,请快速点击<img src="img/icon2.png"
+                                                                class="icon2"/>按钮,如果不是"1",就<span>不按键</span></p>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button">开始答题</p>
     </div>
 </div>
 
-<div class="screen screen1" id="list">
-    <div class="part-text">
-        <p>树叶在<span>左侧</span>落下时，选择<span>颜色</span>与它相同的按钮。</p>
-        <P>树叶在<span>右侧</span>落下时，选择<span>形状</span>与它相同的按钮。</P>
-    </div>
 
-    <ul class="part-btn-box" id="leafBtn">
-    </ul>
-    <div class="leaf-box" id="leafBox">
+<div class="screen ">
+    <div class="box-bg box-img-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否与<span>前一个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box middle">
+            <img src="img/middle.png"/>
+        </div>
     </div>
+    <div class="button-box">
+        <p class="button">开始练习</p>
+    </div>
+</div>
+<div class="screen ">
+    <div class="box-bg box-img-top-2">
+        <div class="box-text-2">
+            <p class="font-small">您回答得很好！请点击下一页继续答题。</p>
+            <p>判断屏幕上出现的数字是否与<span>前一个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box middle">
+            <img src="img/middle.png"/>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button">开始答题</p>
+    </div>
+</div>
+<div class="screen ">
+    <div class="box-bg box-img-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否与<span>往前数第二个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box senior">
 
+            <img src="img/senior.png"/>
+        </div>
+
+    </div>
+    <div class="button-box">
+        <p class="button">开始练习</p>
+    </div>
+</div>
+<div class="screen ">
+    <div class="box-bg  box-img-top-2">
+        <div class="box-text-2">
+            <p class="font-small">您回答得很好！请点击下一页继续答题。</p>
+            <p class="font-small">判断屏幕上出现的数字是否与<span>往前数第二个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box senior">
+            <img src="img/senior.png"/>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button">开始答题</p>
+    </div>
+</div>
+
+
+<div class="screen " style="display: block">
+    <div class="part-text part-text-small" style="display: none">如果是<span>"1"</span>，请快速点击<img src="img/icon2.png"
+                                                                                               class="icon2"/>按钮；如果不是<span>"1"</span>，就不按键。
+    </div>
+    <div class="part-text" style="display: none">如果屏幕上出现的数字与<span>前一个数字</span>相同，请快速点击<img src="img/icon2.png"
+                                                                                           class="icon2"/>按钮；否则不按键。
+    </div>
+    <div class="part-text">如果屏幕上出现的数字与往前数第二个数字相同，请快速点击<img src="img/icon2.png" class="icon2"/>按钮；否则不按键。</div>
+    <div class="part">1</div>
+    <div class="part-btn"></div>
     <div class="stop img-box" id="stopBntBox">
         <img src="img/stop.png" id="stop"/>
     </div>
+    <div class="time-box" id="timeBox">
+        <p><span id="time">2</span>秒</p>
+    </div>
+
 </div>
 
 
-<div class="screen screen1" id="screen3">
+<div class="screen ">
     <div class="box-bg box-bg-top">
         <div class="box-text-2">
-            <p>你回答得很好！下面开始正式测验。</p>
+            <p class="font-big">回答得很好！</p>
+            <p>接下来的测试中，请您注意<span>屏幕上方</span>提示的规则</p>
+            <p>根据规则进行回答</p>
         </div>
-        <ul class="box-text-1">
-            <li><i><img src="img/icon.png"/></i>
-                树叶从左侧下落，请点击与树叶颜色相同的按钮。
-            </li>
-            <li><i><img src="img/icon.png"/></i>
-                树叶从右侧下落，请点击与树叶形状相同的按钮。
-            </li>
-            <li><i><img src="img/icon.png"/></i>
-                请您又快又准地作答。
-            </li>
-
-        </ul>
     </div>
     <div class="button-box">
-        <p class="button" id="goTest">开始测验</p>
+        <p class="button">开始测验</p>
     </div>
 </div>
+
 <div class="screen" id="stopBox">
     <div class="logo img-box"><img src="img/logo.png"/></div>
     <div class="box-bg">
         <ul class="box-text-1">
-            <li><i><img src="img/icon.png"/></i>在多个任务间灵活切换的能力。</li>
-            <li><i><img src="img/icon.png"/></i>本测验大约需要5分钟。</li>
+            <li><i><img src="img/icon.png"/></i>本测验考察数字工作记忆能力</li>
+            <li><i><img src="img/icon.png"/></i>相关脑区主要为大脑前额叶及顶叶</li>
         </ul>
     </div>
 
     <div class="button-box button-box-s">
         <p class="button" data-role="out">退出游戏</p>
         <p class="button" id="continue">继续测验</p>
+
     </div>
 </div>
 
 <div class="screen" id="over">
-    <div class="box-bg box-bg-top">
+    <div class="box-bg box-bg-top over">
         <div class="box-text-2">
             <p class="font-big">您回答得很好！</p>
             <p class="font-small">点击进入下一个测验</p>
@@ -119,13 +187,22 @@
 <script>
     var screenH = $(document).height()
 
-    $('.box-bg').css({'font-size': screenH / 23, 'line-height': screenH / 12 + 'px'})
-    $('.box-bg .font-small').css({'font-size': screenH / 24})
-    $('.box-bg .font-big').css({'font-size': screenH / 18, 'line-height': screenH / 8 + 'px'})
+    $('.box-bg .font-big').css({'font-size': screenH / 20, 'line-height': screenH / 8 + 'px'})
+    $('.box-bg').css({'font-size': screenH / 24, 'line-height': screenH / 10 + 'px'})
+    $('.box-bg .font-small').css({'font-size': screenH / 26, 'line-height': screenH / 12 + 'px'})
     $('.button').css({'font-size': screenH / 24, 'line-height': screenH / 11 + 'px'})
-
+    $('.part').css({'width': screenH / 4, 'height': screenH / 4,'font-size': screenH / 6})
+    $('.part-btn').css({'width': screenH / 7, 'height': screenH / 7})
     $('.part-text').css({'font-size': screenH / 32})
-    $('.leaf').css({'width': screenH / 10, 'height': screenH / 10})
+    $('.icon2').css({'height': screenH / 26})
+    $('.time-box').css({'width': screenH * 0.12})
+    $('.time-box p').css({
+        'width': screenH * 0.12,
+        'height': screenH * 0.12 + 'px',
+        'line-height': screenH * 0.12 + 'px',
+        'font-size': screenH / 34
+    })
+    $('.time-box p span').css({'font-size': screenH / 20})
 </script>
 <script src="javascript/gameView.js"></script>
 </body>
