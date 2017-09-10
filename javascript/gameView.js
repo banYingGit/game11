@@ -8,7 +8,7 @@
  * sourceSMiddle: 中级资源
  * sourceBig：高级资源
  * order：答题顺序
- * curOrder：当前答题顺序
+ * curCheck：当前检出值
  * setPartTime: 循环设置数字
  * atuoTime：倒计时
  *
@@ -29,7 +29,7 @@ var sourceSmall = {
         "leave3": {"check": "0", "arr": [1, 5, 8, 5, 8, 0, 0, 1, 7, 9, 7, 6, 3, 4, 3, 4, 2, 6, 2, 9]}
     },
     order = [['1s', '1m', '1b'], ['2m', '2b', '2s'], ['3b', '3s', '3m']],
-    curOrder = '',
+    curCheck = '',
     setPartTime,
     atuoTime;
 
@@ -52,9 +52,12 @@ function _event() {
         $('#screen2').remove()
         $('#part').show()
         $('#partText1').show()
-        curOrder = order[0][0]
 
-        _setPart(sourceSmall.leave1.arr)
+        curCheck = sourceSmall.leave1.check
+
+        _setPart(sourceSmall.leave1.arr, function () {
+
+        })
 
 
     })
@@ -87,7 +90,20 @@ function _event() {
 
 // 点击按钮事件处理
 function _clickBtn(e) {
+    $('#partBtn').removeAttr('onclick')
 
+    var $num = $('#partNum').text()
+
+    if ($num == curCheck) {
+
+        console.log('$num,curCheck', $num, curCheck)
+
+
+    }else{
+
+        $(e.target).addClass('error')
+
+    }
 
 }
 
@@ -95,13 +111,15 @@ function _clickBtn(e) {
 /*** 设置part
  * data：数组
  ***/
-function _setPart(data,fn) {
+function _setPart(data, fn) {
 
     var i = 0;
 
     $('#time').text(2)
 
     $('#partNum').text(data[0])
+
+    $("#partBtn").removeClass('error')
 
     _second()
 
@@ -113,9 +131,11 @@ function _setPart(data,fn) {
 
         $('#partNum').text(data[i])
 
+        $('#partBtn').attr('onclick', '_clickBtn(event)')
+
         _second()
 
-        if (i == data.length-1) {
+        if (i == data.length - 1) {
 
             clearInterval(setPartTime)
 
@@ -125,9 +145,7 @@ function _setPart(data,fn) {
 
     }
 
-        setPartTime = setInterval(timeFn, 3000);
-
-
+    setPartTime = setInterval(timeFn, 3000);
 
 
 }
@@ -137,13 +155,13 @@ function _second() {
     setTimeout(function () {
         $('#time').text(1)
 
-    },1000)
+    }, 1000)
 
     setTimeout(function () {
         $('#time').text(0)
         $('#partNum').text('+')
-    },2000)
-    
+    }, 2000)
+
 }
 
 /*** 倒计时

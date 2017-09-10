@@ -199,6 +199,10 @@ img {
     background: url("../img/icon2Big.png") center no-repeat;
     background-size: 100% 100%;
 }
+.part-btn.error{
+    background: url("../img/icon2BigB.png") center no-repeat;
+    background-size: 100% 100%;
+}
 
 /** 游戏暂停 **/
 .stop {
