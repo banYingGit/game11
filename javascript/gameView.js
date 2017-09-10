@@ -119,9 +119,9 @@ function _setPart(data, fn) {
 
     $('#partNum').text(data[0])
 
-    $("#partBtn").removeClass('error')
+    $('#partBtn').attr('onclick', '_clickBtn(event)')
 
-    _second()
+        _second()
 
     var timeFn = function () {
 
@@ -131,7 +131,7 @@ function _setPart(data, fn) {
 
         $('#partNum').text(data[i])
 
-        $('#partBtn').attr('onclick', '_clickBtn(event)')
+        $('#partBtn').attr('onclick', '_clickBtn(event)').removeClass('error')
 
         _second()
 
@@ -160,6 +160,7 @@ function _second() {
     setTimeout(function () {
         $('#time').text(0)
         $('#partNum').text('+')
+
     }, 2000)
 
 }
