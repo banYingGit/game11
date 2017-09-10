@@ -9,7 +9,7 @@
  * sourceBig：高级资源
  * order：答题顺序
  * curOrder：当前答题顺序
- *
+ * setPartTime: 循环设置数字
  * atuoTime：倒计时
  *
  */
@@ -29,6 +29,8 @@ var sourceSmall = {
         "leave3": {"check": "0", "arr": [1, 5, 8, 5, 8, 0, 0, 1, 7, 9, 7, 6, 3, 4, 3, 4, 2, 6, 2, 9]}
     },
     order = [['1s', '1m', '1b'], ['2m', '2b', '2s'], ['3b', '3s', '3m']],
+    curOrder = '',
+    setPartTime,
     atuoTime;
 
 _event();
@@ -45,9 +47,14 @@ function _event() {
 
     })
 
-    $('#goPractice').click(function () {
+    $('#go1sPra').click(function () {
 
         $('#screen2').remove()
+        $('#part').show()
+        $('#partText1').show()
+        curOrder = order[0][0]
+
+        _setPart(sourceSmall.leave1.arr)
 
 
     })
@@ -85,19 +92,73 @@ function _clickBtn(e) {
 }
 
 
+/*** 设置part
+ * data：数组
+ ***/
+function _setPart(data,fn) {
+
+    var i = 0;
+
+    $('#time').text(2)
+
+    $('#partNum').text(data[0])
+
+    _second()
+
+    var timeFn = function () {
+
+        i = i + 1
+
+        $('#time').text(2)
+
+        $('#partNum').text(data[i])
+
+        _second()
+
+        if (i == data.length-1) {
+
+            clearInterval(setPartTime)
+
+            fn && fn.call(this)
+
+        }
+
+    }
+
+        setPartTime = setInterval(timeFn, 3000);
+
+
+
+
+}
+
+function _second() {
+
+    setTimeout(function () {
+        $('#time').text(1)
+
+    },1000)
+
+    setTimeout(function () {
+        $('#time').text(0)
+        $('#partNum').text('+')
+    },2000)
+    
+}
+
 /*** 倒计时
  * i：时间
  * fn：倒计时结束回调
  ***/
 function _time(i, fn) {
 
-    $('#hideTime').text(i)
+    $('#time').text(i)
 
     var timeFn = function () {
 
         i = i - 1
 
-        $('#hideTime').text(i)
+        $('#time').text(i)
 
         if (i == 0) {
 

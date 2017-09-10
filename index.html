@@ -31,15 +31,14 @@
 <div class="screen" id="screen2">
     <div class="box-bg box-bg-top">
         <div class="box-text-2">
-            <p>判断屏幕上出现的数字是否为"<span data-role="check">1</span>"</p>
-            <p class="font-small">如果是"<span data-role="check">1</span>",请快速点击<img src="img/icon2.png"
-                                                                                  class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            <p>判断屏幕上出现的数字是否为"<span>1</span>"</p>
+            <p class="font-small">如果是"<span>1</span>",请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果不是,就<span>不按键</span>
             </p>
         </div>
 
     </div>
     <div class="button-box">
-        <p class="button">开始练习</p>
+        <p class="button" id="go1sPra">开始练习</p>
     </div>
 </div>
 <div class="screen ">
@@ -124,17 +123,17 @@
 </div>
 
 
-<div class="screen ">
-    <div class="part-text part-text-small" style="display: none">如果是"<span data-role="check">1</span>"，请快速点击<img
+<div class="screen " id="part">
+    <div class="part-text part-text-small" style="display: none" id="partText1">如果是"<span data-role="check">1</span>"，请快速点击<img
             src="img/icon2.png"
             class="icon2"/>按钮；如果不是，就不按键。
     </div>
-    <div class="part-text" style="display: none">如果屏幕上出现的数字与<span>前一个数字</span>相同，请快速点击<img src="img/icon2.png"
+    <div class="part-text" style="display: none"  id="partText2">如果屏幕上出现的数字与<span>前一个数字</span>相同，请快速点击<img src="img/icon2.png"
                                                                                            class="icon2"/>按钮；否则不按键。
     </div>
-    <div class="part-text">如果屏幕上出现的数字与往前数第二个数字相同，请快速点击<img src="img/icon2.png" class="icon2"/>按钮；否则不按键。</div>
-    <div class="part">1</div>
-    <div class="part-btn"></div>
+    <div class="part-text" style="display: none"  id="partText3">如果屏幕上出现的数字与往前数第二个数字相同，请快速点击<img src="img/icon2.png" class="icon2"/>按钮；否则不按键。</div>
+    <div class="part" id="partNum">1</div>
+    <div class="part-btn" id="partBtn"></div>
     <div class="stop img-box" id="stopBntBox">
         <img src="img/stop.png" id="stop"/>
     </div>
