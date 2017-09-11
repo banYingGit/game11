@@ -199,7 +199,7 @@ img {
     background: url("../img/icon2Big.png") center no-repeat;
     background-size: 100% 100%;
 }
-.part-btn.error{
+.part-btn.visited{
     background: url("../img/icon2BigB.png") center no-repeat;
     background-size: 100% 100%;
 }
@@ -232,4 +232,8 @@ img {
 
 .time-box p span {
     color: #333;
+}
+/** 禁止点击 **/
+.noEvent{
+    pointer-events: none;
 }

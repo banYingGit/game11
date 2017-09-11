@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div class="screen" id="screen1"  style="display: block">
+<div class="screen" id="screen1" style="display: block">
     <div class="logo img-box"><img src="img/logo.png"/></div>
     <div class="box-bg">
         <div class="box-text-2"><p class="font-big">对信息短时存储和加工的能力</p>
@@ -28,11 +28,15 @@
         <p class="button" id="goScreen2">进入测验</p>
     </div>
 </div>
+
+<!----------- 第一轮 开始 -------->
+<!-- 第一轮 初级 -->
 <div class="screen" id="screen2">
     <div class="box-bg box-bg-top">
         <div class="box-text-2">
             <p>判断屏幕上出现的数字是否为"<span>1</span>"</p>
-            <p class="font-small">如果是"<span>1</span>",请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            <p class="font-small">如果是"<span>1</span>",请快速点击<img src="img/icon2.png"
+                                                                class="icon2"/>按钮,如果不是,就<span>不按键</span>
             </p>
         </div>
 
@@ -41,23 +45,22 @@
         <p class="button" id="go1sPra">开始练习</p>
     </div>
 </div>
-<div class="screen ">
+<div class="screen " id="screen2T">
     <div class="box-bg box-bg-top">
         <div class="box-text-2">
             <p>您回答得很好！请点击下一页继续答题。</p>
-            <p>判断屏幕上出现的数字是否为"<span data-role="check">1</span>"</p>
-            <p class="font-small">如果是"<span data-role="check">1</span>",请快速点击<img src="img/icon2.png"
-                                                                                  class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            <p>判断屏幕上出现的数字是否为"<span>1</span>"</p>
+            <p class="font-small">如果是"<span>1</span>",请快速点击<img src="img/icon2.png"
+                                                                class="icon2"/>按钮,如果不是,就<span>不按键</span>
             </p>
         </div>
     </div>
     <div class="button-box">
-        <p class="button">开始答题</p>
+        <p class="button" id="go1sTest">开始答题</p>
     </div>
 </div>
-
-
-<div class="screen ">
+<!-- 第一轮 中级 -->
+<div class="screen " id="screen3">
     <div class="box-bg box-img-top">
         <div class="box-text-2">
             <p>判断屏幕上出现的数字是否与<span>前一个</span>数字相同</p>
@@ -69,10 +72,10 @@
         </div>
     </div>
     <div class="button-box">
-        <p class="button">开始练习</p>
+        <p class="button" id="go1mPra">开始练习</p>
     </div>
 </div>
-<div class="screen ">
+<div class="screen " id="screen3T">
     <div class="box-bg box-img-top-2">
         <div class="box-text-2">
             <p class="font-small">您回答得很好！请点击下一页继续答题。</p>
@@ -85,10 +88,11 @@
         </div>
     </div>
     <div class="button-box">
-        <p class="button">开始答题</p>
+        <p class="button" id="go1mTest">开始答题</p>
     </div>
 </div>
-<div class="screen ">
+<!-- 第一轮 高级 -->
+<div class="screen " id="screen4">
     <div class="box-bg box-img-top">
         <div class="box-text-2">
             <p>判断屏幕上出现的数字是否与<span>往前数第二个</span>数字相同</p>
@@ -102,10 +106,10 @@
 
     </div>
     <div class="button-box">
-        <p class="button">开始练习</p>
+        <p class="button" id="go1bPra">开始练习</p>
     </div>
 </div>
-<div class="screen ">
+<div class="screen " id="screen4T">
     <div class="box-bg  box-img-top-2">
         <div class="box-text-2">
             <p class="font-small">您回答得很好！请点击下一页继续答题。</p>
@@ -118,20 +122,156 @@
         </div>
     </div>
     <div class="button-box">
-        <p class="button">开始答题</p>
+        <p class="button" id="go1bTest">开始答题</p>
+    </div>
+</div>
+<!-- 第一轮 结束语 -->
+<div class="screen " id="overRound1">
+    <div class="box-bg box-bg-top">
+        <div class="box-text-2">
+            <p class="font-big">回答得很好！</p>
+            <p>接下来的测试中，请您注意<span>屏幕上方</span>提示的规则</p>
+            <p>根据规则进行回答</p>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" id="go2">开始测验</p>
+    </div>
+</div>
+
+<!----------- 第二轮 开始 -------->
+<!-- 第二轮 中级 -->
+<div class="screen " id="screen5">
+    <div class="box-bg box-img-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否与<span>前一个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box middle">
+            <img src="img/middle.png"/>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" id="go2m">开始答题</p>
+    </div>
+</div>
+<!-- 第二轮 高级 -->
+<div class="screen " id="screen6">
+    <div class="box-bg box-img-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否与<span>往前数第二个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box senior">
+
+            <img src="img/senior.png"/>
+        </div>
+
+    </div>
+    <div class="button-box">
+        <p class="button" id="go2b">开始答题</p>
+    </div>
+</div>
+<!-- 第二轮 初级 -->
+<div class="screen" id="screen7">
+    <div class="box-bg box-bg-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否为"<span>6</span>"</p>
+            <p class="font-small">如果是"<span>6</span>",请快速点击<img src="img/icon2.png"
+                                                                class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            </p>
+        </div>
+
+    </div>
+    <div class="button-box">
+        <p class="button" id="go2s">开始答题</p>
+    </div>
+</div>
+
+<!-- 第二轮 结束语 -->
+<div class="screen " id="overRound2">
+    <div class="box-bg box-bg-top">
+        <div class="box-text-2">
+            <p class="font-big">回答得很好！</p>
+            <p>接下来的测试中，请您注意<span>屏幕上方</span>提示的规则</p>
+            <p>根据规则进行回答</p>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" id="go3">开始测验</p>
     </div>
 </div>
 
 
+<!----------- 第三轮 开始 -------->
+<!-- 第三轮 高级 -->
+<div class="screen " id="screen8">
+    <div class="box-bg box-img-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否与<span>往前数第二个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box senior">
+
+            <img src="img/senior.png"/>
+        </div>
+
+    </div>
+    <div class="button-box">
+        <p class="button" id="go3b">开始答题</p>
+    </div>
+</div>
+<!-- 第三轮 初级 -->
+<div class="screen" id="screen9">
+    <div class="box-bg box-bg-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否为"<span>2</span>"</p>
+            <p class="font-small">如果是"<span>2</span>",请快速点击<img src="img/icon2.png"
+                                                                class="icon2"/>按钮,如果不是,就<span>不按键</span>
+            </p>
+        </div>
+
+    </div>
+    <div class="button-box">
+        <p class="button" id="go3s">开始答题</p>
+    </div>
+</div>
+<!-- 第三轮 中级 -->
+<div class="screen " id="screen10">
+    <div class="box-bg box-img-top">
+        <div class="box-text-2">
+            <p>判断屏幕上出现的数字是否与<span>前一个</span>数字相同</p>
+            <p class="font-small">如果是<span>相同</span>,请快速点击<img src="img/icon2.png" class="icon2"/>按钮,如果<span>不相同</span>,就<span>不按键</span>
+            </p>
+        </div>
+        <div class="img-box middle">
+            <img src="img/middle.png"/>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" id="go3m">开始答题</p>
+    </div>
+</div>
+
+
+<!----------- 以上 第三轮 全部结束  -------->
+
+
 <div class="screen " id="part">
-    <div class="part-text part-text-small" style="display: none" id="partText1">如果是"<span data-role="check">1</span>"，请快速点击<img
+    <div class="part-text part-text-small" style="display: none" id="partText1" data-role="partText">如果是"<span data-role="check">1</span>"，请快速点击<img
             src="img/icon2.png"
             class="icon2"/>按钮；如果不是，就不按键。
     </div>
-    <div class="part-text" style="display: none"  id="partText2">如果屏幕上出现的数字与<span>前一个数字</span>相同，请快速点击<img src="img/icon2.png"
-                                                                                           class="icon2"/>按钮；否则不按键。
+    <div class="part-text" style="display: none" id="partText2" data-role="partText">如果屏幕上出现的数字与<span>前一个数字</span>相同，请快速点击<img
+            src="img/icon2.png"
+            class="icon2"/>按钮；否则不按键。
     </div>
-    <div class="part-text" style="display: none"  id="partText3">如果屏幕上出现的数字与往前数第二个数字相同，请快速点击<img src="img/icon2.png" class="icon2"/>按钮；否则不按键。</div>
+    <div class="part-text" style="display: none" id="partText3" data-role="partText">如果屏幕上出现的数字与往前数第二个数字相同，请快速点击<img src="img/icon2.png"
+                                                                                                class="icon2"/>按钮；否则不按键。
+    </div>
     <div class="part" id="partNum">1</div>
     <div class="part-btn" id="partBtn"></div>
     <div class="stop img-box" id="stopBntBox">
@@ -141,21 +281,9 @@
         <p><span id="time">2</span>秒</p>
     </div>
 
+    <div id="hideNum" style=" width:100px;font-size: 60px;    position: relative;  z-index: 1000;">0</div>
 </div>
 
-
-<div class="screen ">
-    <div class="box-bg box-bg-top">
-        <div class="box-text-2">
-            <p class="font-big">回答得很好！</p>
-            <p>接下来的测试中，请您注意<span>屏幕上方</span>提示的规则</p>
-            <p>根据规则进行回答</p>
-        </div>
-    </div>
-    <div class="button-box">
-        <p class="button">开始测验</p>
-    </div>
-</div>
 
 <div class="screen" id="stopBox">
     <div class="logo img-box"><img src="img/logo.png"/></div>
